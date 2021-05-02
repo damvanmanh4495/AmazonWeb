@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "react-router-dom": "^5.2.0"
+  },
+  "name": "amazon",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damvanmanh4495/AmazonWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damvanmanh4495/AmazonWeb/issues"
+  },
+  "homepage": "https://github.com/damvanmanh4495/AmazonWeb#readme",
+  "description": ""
+}
