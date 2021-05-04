@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userActions";
+import ShippingAddressScreen from "./components/ShippingAddressScreen";
 import CartScreen from "./screen/CartScreen";
 import HomeScreen from "./screen/HomeScreen";
+import PaymentMethodScreen from "./screen/PaymentMethodScreen";
 import ProductScreen from "./screen/ProductScreen";
 import RegisterScreen from "./screen/RegisterScreen";
 import SigninScreen from "./screen/SigninScreen";
@@ -55,6 +57,8 @@ function App() {
           <Route path="/product/:id" component={ProductScreen} />
           <Route path="/signin" component={SigninScreen} />
           <Route path="/register" component={RegisterScreen} />
+          <Route path="/shipping" component={ShippingAddressScreen} />
+          <Route path="/payment" component={PaymentMethodScreen} />
           <Route path="/" component={HomeScreen} exact />
         </main>
         <footer className="row center">All right reserved</footer>
