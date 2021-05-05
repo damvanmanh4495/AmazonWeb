@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { saveShippingAddress } from "../actions/cartAction";
+import { saveShippingAddress } from "../actions/cartActions";
 import CheckoutStep from "./CheckoutStep";
 
 export default function ShippingAddressScreen(props) {
@@ -11,11 +11,11 @@ export default function ShippingAddressScreen(props) {
   if (!userInfo) {
     props.history.push("/signin");
   }
-  const [fullName, setFullName] = useState(shippingAddress.fullName);
-  const [address, setAddress] = useState(shippingAddress.address);
-  const [city, setCity] = useState(shippingAddress.city);
-  const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
-  const [country, setCountry] = useState(shippingAddress.country);
+  const [fullName, setFullName] = useState(shippingAddress.fullName || '');
+  const [address, setAddress] = useState(shippingAddress.address || '');
+  const [city, setCity] = useState(shippingAddress.city || '');
+  const [postalCode, setPostalCode] = useState(shippingAddress.postalCode || '');
+  const [country, setCountry] = useState(shippingAddress.country || '');
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
